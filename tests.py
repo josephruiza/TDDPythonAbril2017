@@ -26,6 +26,12 @@ class TestsCalculator(unittest.TestCase):
         result = self.calculator.add(5, 5)  # 5 + 5 = 10
         self.assertEqual(result, 10)
 
+    def test_commutative_property(self):
+        result_a = self.calculator.add(3, 4)
+        result_b = self.calculator.add(4, 3)
+        self.assertEqual(result_a, result_b)
+
+
 
 # comprueba si se está ejecutando directamente este archivo con el comando: python tests.py y, de ser así, arranca los test
 if __name__ == "__main__":
