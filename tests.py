@@ -26,10 +26,20 @@ class TestsCalculator(unittest.TestCase):
         result = self.calculator.add(5, 5)  # 5 + 5 = 10
         self.assertEqual(result, 10)
 
-    def test_commutative_property(self):
+    def test_add_commutative_property(self):
         result_a = self.calculator.add(3, 4)
         result_b = self.calculator.add(4, 3)
         self.assertEqual(result_a, result_b)
+
+    def test_subtract_1_6(self):
+        result = self.calculator.subtract(1, 6)  # 1 - 6 = -5
+        self.assertEqual(result, -5)
+
+    def test_subtract_no_commutative_property(self):
+        result_a = self.calculator.subtract(1, 6)
+        result_b = self.calculator.subtract(6, 1)
+        self.assertNotEqual(result_a, result_b)
+
 
 
 
